@@ -52,6 +52,11 @@ p {
 .li-nav:not(:last-child){
    margin-right:40px ;
 }
+.li-nav{
+    transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
         
 .nav-link {
@@ -62,14 +67,41 @@ padding-bottom: 21px;
     line-height: 1.5;
     color: #2E2F42;
     text-decoration: none;
+    transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
  .current
 {
     color: #404BBF;
+    position: relative;
 
 }
+.current::after{
+    content: "";
+    display: block;
+    
+   
+    position:absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 48px;
+        height: 4px;
+    
+        background: #404BBF;
+        border-radius: 2px;
+        opacity: 0;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.current:hover::after{
+opacity: 1;
+}
+
 
 
 .mail{
@@ -78,6 +110,10 @@ padding-bottom: 21px;
     line-height: 1.5;
     color: #434455;
     text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .mail:hover ,
 .mail:focus{
@@ -92,6 +128,10 @@ padding-bottom: 21px;
         text-decoration: none;
         margin-left: 40px;
 
+        transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .contacts{
@@ -104,6 +144,7 @@ padding-bottom: 21px;
     
     color: #404BBF;
    text-decoration: none;
+
 }
 
 .line-header {
@@ -150,7 +191,9 @@ text-align: center;
         cursor: pointer;
         font-family: inherit;
         border: none;
-      
+        transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
        
     }
 
@@ -225,6 +268,10 @@ background-color: #E7E9FC;
  border: 1px solid rgba(0, 0, 0, 0.1);
  margin-left: 360px;
  margin-top:24px;
+ align-items: center;
+transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -392,6 +439,9 @@ display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-team:hover ,
@@ -474,6 +524,10 @@ display: flex;
         height:88px;
         justify-content: center;
         align-items: center;
+
+        transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
  .li-cust:hover ,
  .li-cust:focus{
@@ -594,6 +648,9 @@ font-family: 'Raleway';
     background: rgba(255, 255, 255, 0.1);
 border-radius: 100%;
 display: flex;
+transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .footer-soc:hover ,
