@@ -62,9 +62,9 @@ p {
 
 
 .nav-link {
-    display: block;
+    
     padding-top: 21px;
-    padding-bottom: 21px;
+    padding-bottom: 28px;
     font-weight: 500;
     line-height: 1.5;
     color: #2E2F42;
@@ -90,7 +90,37 @@ p {
     bottom: 0;
     left: 0;
 
-    width: 66px;
+    width: 100%;
+    height: 4px;
+
+    background: #404BBF;
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.current:hover::after {
+    opacity: 1;
+}
+
+
+.web-menu {
+
+    position: relative;
+
+}
+
+.web-menu::after {
+    content: "";
+    display: block;
+
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
     height: 4px;
 
     background: #404BBF;
@@ -100,7 +130,8 @@ p {
 }
 
 
-.current:hover::after {
+.web-menu:hover::after ,
+.web-menu:focus::after {
     opacity: 1;
 }
 
@@ -194,7 +225,7 @@ margin-bottom: 72px;
         font-family: var(--main-font);
 
 
-        transition-property: background-color;
+        transition-property: background-color , box-shadow , color , border-color;
             transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -203,8 +234,8 @@ margin-bottom: 72px;
 .portfolio-btn:focus{
     background-color: #404BBF;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 4px;
          color: #FFFFFF;
+         border-color: transparent;
     
          
 }
@@ -237,11 +268,17 @@ width: 360px;
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 text-decoration: none;
-transition-property: background-color;
+transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.link-li:focus .product-thumb::before {
+transform: translateY(0);
 
+}
+.link-li:focus .product-overlay {
+    transform: translateY(0);
+}
 
 .link-li:hover ,
 .link-li:focus{
@@ -278,9 +315,11 @@ position: relative;
 
 }
 
-.product:hover .product-thumb::before{
+.product:hover .product-thumb::before
+{
 transform: translateY(0);
 }
+
 
 .product-overlay{
 position: absolute;
@@ -296,6 +335,7 @@ position: absolute;
 .product-overlay{
     transform: translateY(0);
 }
+
 
 .product-actions{
     position: absolute;
